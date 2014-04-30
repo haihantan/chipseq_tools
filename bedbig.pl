@@ -40,6 +40,7 @@ while (<INFILE>) {
 	if ($tokens[1] < 0 || $tokens[2] < 0) { next; }
 	if ($tokens[1] >= $size{$tokens[0]}) { next; }
 	if ($tokens[2] > $size{$tokens[0]}) { $tokens[2] = $size{$tokens[0]}; }
+	if ($tokens[3] eq "") {$tokens[3]="0";}
 	print OUTFILE "$tokens[0]\t$tokens[1]\t$tokens[2]\t$tokens[3]\n";
 }
 close INFILE;
