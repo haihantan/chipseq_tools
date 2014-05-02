@@ -13,3 +13,13 @@ All scripts are heavily commented so please read the script itself for requireme
 * get-Ensembl-genes-Xbp-single-ChIP.pl - Annotate peaks with Ensembl genes within X bp of peak center
 * homerbigwig.pl - Generate BigWig files from homer peak calling data by extending tags manually, **ONLY FOR TESTING**
 * wigbig.pl - Convert WIG files to BigWig format
+
+The file 'get-overlapping-peaks.cpp' is a C++ source file which needs to be compiled before use.
+You can use the g++ compiler to compile it and make the resulting binary executable by running:
+
+```
+g++ get-overlapping-peaks.cpp -oget-overlapping-peaks
+chmod a+x get-overlapping-peaks
+```
+
+Then you can simply copy the binary to your bin directory.
