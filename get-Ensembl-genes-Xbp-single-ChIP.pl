@@ -3,19 +3,22 @@
 ###############################################################################################################################################
 #
 #  Written by Andrew C. Nelson - 12/10/2012
+#  modified by Husam Hebaishi on April 2014
 #
 #  Script to identify peak-transcript relationships within X bp
 #
-#  Usage: get-Ensembl-genes-within-Xbp.pl file.bed annotation-file.txt X
+#  Usage: get-Ensembl-genes-within-Xbp-single-ChIP.pl file.bed annotation-file.txt X
 #
 #  where: 
-#  ChIP1-ChIP2-overlapping-peaks.txt is the output file from the script "get-overlapping-peaks.pl"
+#  file.bed is a standard BED file - the most important columns are the first three: chromosome, start and end coords
+#  BED file should NOT contain a header - if there is one, remove it
 #  annotation file is a file downloaded from Ensembl Biomart of the form:
 #     Ensembl Gene ID, Ensembl Transcript ID, Associated Gene Name, Chromosome Name, Gene Start (bp), Gene End (bp), Strand, Transcript Start (bp), Transcript End (bp)
+#  Ensure that the chromosome names in the annotation file are of the format chrN (chr3,chr4 etc). Leave scaffolds as they are.
 #  X is the number of bases from the transcription start site you wish to search
 #
 #  The script returns a file with each line of the format:
-#  Line from annotation file, line from peak file, space, position of core peak centre, distance of peak centre from transcription start site
+#     Ensembl Gene ID, Ensembl Transcript ID, Associated Gene Name, Chromosome Name, Gene Start (bp), Gene End (bp), Strand, Transcript Start (bp), Transcript End (bp) [Line from input bedfile]
 #
 ###############################################################################################################################################
 
