@@ -1,6 +1,7 @@
 #!/bin/sh
 # Run this file inside a Homer tag directory to see the auto-correlation plot
 # The plot is generated as a PDF file and then displayed
+# The plot is saved as tagAutocorr.pdf
 FRAG=`head -n1 tagAutocorrelation.txt | sed  -e 's|)|\t|g' -e 's|(|\t|g' | awk '{print $7}'`
 PEAK=`head -n1 tagAutocorrelation.txt | sed  -e 's|)|\t|g' -e 's|(|\t|g' | awk '{print $11}'`
 echo "pdf(\"tagAutocorr.pdf\",width=6,height=6)" > plot.r
