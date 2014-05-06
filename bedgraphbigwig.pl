@@ -3,12 +3,12 @@
 # Convert bed file to bigbed file
 # Requires bedToBigBed to be in your path
 # You can specify the file containing the chromosome sizes below
-# The file takes two parameters: the bed file to be converted and the chromosome sizes
+# The file takes two parameters: the BedGraph file to be converted and the chromosome sizes
 # It converts 'file.bdg' (BedGraph format) to 'file.bw' (BigWig format)
 # The sorting and clipping of the BED file is done automatically by the script
-# Usage: bedgraphbigwig.pl bedfile.bed chromsizes.txt
+# Usage: bedgraphbigwig.pl bedgraph.bdg chromsizes.txt
 
-if ($ARGV[0] eq "" || $ARGV[1] eq "") {die "Usage: bedbig.pl bedfile.bed chromsizes.txt\n";}
+if ($ARGV[0] eq "" || $ARGV[1] eq "") {die "Usage: bedbig.pl bedgraph.bdg chromsizes.txt\n";}
 
 $chrom=$ARGV[1];
 $in=$ARGV[0];
