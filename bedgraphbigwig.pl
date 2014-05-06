@@ -43,7 +43,7 @@ while (<INFILE>) {
 close INFILE;
 close OUTFILE;
 
-#Now we run bedGraphToBigWig to convert our cleaned up bed file to a BigBed file
+#Now we run bedGraphToBigWig to convert our cleaned up BedGraph file to a BigWig file
 `bedGraphToBigWig tempclipped.bdg $chrom $out`;
 system("rm temp.bdg");
 system("rm tempclipped.bdg");
