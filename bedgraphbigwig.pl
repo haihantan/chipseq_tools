@@ -1,19 +1,19 @@
 #!/usr/bin/perl
 
 # Convert bed file to bigbed file
-# Requires bedGraphToBigWig to be in your path
+# Requires bedToBigBed to be in your path
 # You can specify the file containing the chromosome sizes below
-# The file takes two parameters: the BedGraph file to be converted and the chromosome sizes
+# The file takes two parameters: the bed file to be converted and the chromosome sizes
 # It converts 'file.bdg' (BedGraph format) to 'file.bw' (BigWig format)
 # The sorting and clipping of the BED file is done automatically by the script
-# Usage: bedgraphbigwig.pl bedgraph.bdg chromsizes.txt
+# Usage: bedgraphbigwig.pl bedfile.bed chromsizes.txt file.bw
 
-if ($ARGV[0] eq "" || $ARGV[1] eq "") {die "Usage: bedgraphbigwig.pl bedgraph.bdg chromsizes.txt\n";}
+if ($ARGV[0] eq "" || $ARGV[1] eq "") {die "Usage: bedbig.pl bedfile.bed chromsizes.txt\n";}
 
 $chrom=$ARGV[1];
 $in=$ARGV[0];
-$out=$in;
-$out=~s/\.bdg$/\.bw/gi;
+$out=$ARGV[2];
+
 
 print "Converting BedGraph file $in to BigWig file $out\n";
 
@@ -43,7 +43,7 @@ while (<INFILE>) {
 close INFILE;
 close OUTFILE;
 
-#Now we run bedGraphToBigWig to convert our cleaned up BedGraph file to a BigWig file
+#Now we run bedToBigBed to convert our cleaned up bed file to a BigBed file
 `bedGraphToBigWig tempclipped.bdg $chrom $out`;
 system("rm temp.bdg");
 system("rm tempclipped.bdg");
