@@ -1,0 +1,54 @@
+msort 8.53
+  lib icu      4.8.1.1
+  lib tre      0.8.0
+  lib uninum   2.7
+  glibc        2.17
+Compiled Nov 21 2011 16:23:38 on x86_64
+under Linux 3.11.0-20-generic #35-Ubuntu SMP Fri May 2 21:32:49 UTC 2014
+Copyright 1993-2008 William J. Poser (billposer@alum.mit.edu)
+This program is free software; you can redistribute
+it and/or modify it under the terms of version 3 of
+the GNU General Public License as published by the
+Free Software Foundation.
+Invoked by command line:
+  msort -F
+General options:
+	The following two options must precede any sort order specifications.
+	-B,--BMP		No characters fall outside the BMP.
+	-p,--reserve-private-use-area
+				Do not use the Private Use areas.
+
+	-b,--block		A record is terminated by two or more
+				end-of-line characters.
+	-l,--line		A record consists of a single line
+	-r,--record-separator <separator>
+				A record is terminated by separator character
+	-O,--fixed-size-record-size <bytes>
+				A record consists of the specified number of bytes
+
+	-d,--field-separators <character>+
+				Fields are delimited by the named character(s)
+	-w,--whole-record	Sort on the entire text of the record
+
+	-a,--algorithm <algorithm>
+				I(nsertionSort)
+				M(ergeSort) 
+				Q(uickSort) 
+				S(hellSort)
+	-M,--initial-maximum-records <records>
+				Set initial maximum number of records 
+	-m,--line-end-carriage-return
+				End of line is marked by Carriage Return (0x0D)
+	-I,--invert-globally	Invert sense of comparisons globally
+	-Q,--check-only		Check whether input is sorted. Generate no output.
+				Exit status is 0 if input is sorted, 11 if not.
+	-u,--unicode-normalization <Normalization Mode>
+		c NFC canonical decomposition then composition (default)
+		d NFD canonical decomposition
+		n no normalization
+	-P,--random-seed <seed>
+	-1,--in  <Input File Name>
+	-2,--out <Output File Name>
+	-j,--suppress-log	Suppress log output
+	-q,--quiet		Be quiet - do not chat while working
+

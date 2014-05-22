@@ -13,6 +13,17 @@ All scripts are heavily commented so please read the script itself for requireme
 * get-Ensembl-genes-Xbp-single-ChIP.pl - Annotate peaks with Ensembl genes within X bp of peak center
 * homerbigwig.pl - Generate BigWig files from homer peak calling data by extending tags manually, **ONLY FOR TESTING**
 * wigbig.pl - Convert WIG files to BigWig format
+* countuniq.sh - Counts duplicates in fastq file.
+
+countuniq.sh can be run either on uncompressed fastq files:
+```
+countuniq.sh file.fastq
+```
+or on compressed fastq files:
+```
+zcat file.fastq.gz | countuniq.sh
+```
+
 
 The file 'get-overlapping-peaks.cpp' is a C++ source file which needs to be compiled before use.
 You can use the g++ compiler to compile it and make the resulting binary executable by running:
