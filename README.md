@@ -11,7 +11,7 @@ All scripts are heavily commented so please read the script itself for requireme
 * bedbig.pl - Convert BED file to BigBed format
 * bedgraphbigwig.pl - Convert BedGraph file to BigWig format
 * get-Ensembl-genes-Xbp-single-ChIP.pl - Annotate peaks with Ensembl genes within X bp of peak center
-* homerbigwig.pl - Generate BigWig files from homer peak calling data by extending tags manually, **ONLY FOR TESTING**
+* homerbigwig.pl - Generate BigWig files from homer peak calling data by extending tags manually
 * wigbig.pl - Convert WIG files to BigWig format
 * countuniq.sh - Counts duplicates in fastq file.
 
