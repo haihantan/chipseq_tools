@@ -39,12 +39,12 @@ int main(int argc, char* argv[]) {
 	vector <string> chip1_chr;
 	vector <long> chip1_start;
 	vector <long> chip1_end;
-	vector <double> chip1_score;
+	vector <string> chip1_peakid;
 
 	vector <string> chip2_chr;
 	vector <long> chip2_start;
 	vector <long> chip2_end;
-	vector <double> chip2_score;
+	vector <string> chip2_peakid;
 	
 	
 	// Too few parameters: need inputbedfile1 inputbedfile2 outputfile
@@ -86,7 +86,7 @@ int main(int argc, char* argv[]) {
 		chip1_chr.push_back(chro);
 		chip1_start.push_back(atoi(start.c_str()));
 		chip1_end.push_back(atoi(end.c_str()));
-		chip1_score.push_back(atof(score.c_str()));
+		chip1_peakid.push_back(peakid.c_str());
 	}
 	
 	file1.close();
@@ -109,7 +109,7 @@ int main(int argc, char* argv[]) {
 		chip2_chr.push_back(chro);
 		chip2_start.push_back(atoi(start.c_str()));
 		chip2_end.push_back(atoi(end.c_str()));
-		chip2_score.push_back(atof(score.c_str()));
+		chip2_peakid.push_back(peakid.c_str());
 	}
 	
 	file2.close();
@@ -148,7 +148,7 @@ int main(int argc, char* argv[]) {
 				temp << "\t";
 				temp << chip1_end[i];
 				temp << "\t";
-				temp << chip1_score[i];
+				temp << chip1_peakid[i];
 				temp << "\t";
 				temp << "ChIP2\t";
 				temp << chip2_chr[j];
@@ -157,7 +157,7 @@ int main(int argc, char* argv[]) {
 				temp << "\t";
 				temp << chip2_end[j];
 				temp << "\t";
-				temp << chip2_score[j];
+				temp << chip2_peakid[j];
 				temp << "\t";
 				temp << corestart;
 				temp << "\t";
@@ -192,7 +192,7 @@ int main(int argc, char* argv[]) {
 				temp << "\t";
 				temp << chip1_end[i];
 				temp << "\t";
-				temp << chip1_score[i];
+				temp << chip1_peakid[i];
 				temp << "\t";
 				temp << "ChIP2\t";
 				temp << chip2_chr[j];
@@ -201,7 +201,7 @@ int main(int argc, char* argv[]) {
 				temp << "\t";
 				temp << chip2_end[j];
 				temp << "\t";
-				temp << chip2_score[j];
+				temp << chip2_peakid[j];
 				temp << "\t";
 				temp << corestart;
 				temp << "\t";
@@ -246,7 +246,7 @@ int main(int argc, char* argv[]) {
 				temp << "\t";
 				temp << chip1_end[i];
 				temp << "\t";
-				temp << chip1_score[i];
+				temp << chip1_peakid[i];
 				temp << "\t";
 				temp << "ChIP2\t";
 				temp << chip2_chr[j];
@@ -255,7 +255,7 @@ int main(int argc, char* argv[]) {
 				temp << "\t";
 				temp << chip2_end[j];
 				temp << "\t";
-				temp << chip2_score[j];
+				temp << chip2_peakid[j];
 				temp << "\t";
 				temp << corestart;
 				temp << "\t";
@@ -289,7 +289,7 @@ int main(int argc, char* argv[]) {
 				temp << "\t";
 				temp << chip1_end[i];
 				temp << "\t";
-				temp << chip1_score[i];
+				temp << chip1_peakid[i];
 				temp << "\t";
 				temp << "ChIP2\t";
 				temp << chip2_chr[j];
@@ -298,7 +298,7 @@ int main(int argc, char* argv[]) {
 				temp << "\t";
 				temp << chip2_end[j];
 				temp << "\t";
-				temp << chip2_score[j];
+				temp << chip2_peakid[j];
 				temp << "\t";
 				temp << corestart;
 				temp << "\t";
