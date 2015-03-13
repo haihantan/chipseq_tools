@@ -347,6 +347,8 @@ int main(int argc, char* argv[]) {
 	
 	// Finally, after removing duplicates, write overlaps to output file
 	
+	of << "ChIP1\tchip1_chr\tchip1_start\tchip1_end\tchip1_peakid\tChIP2\tchip2_chr\tchip2_start\tchip2_end\tchip2_peakid\tintersect_start\tintersect_end\tintersect_size\tmerge_start\tmerge_end\tmerge_size\n";
+	
 	for (i=0 ; i<outputclean.size() ; i++) {
 		of << outputclean[i];
 	}
